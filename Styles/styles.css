@@ -1,27 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-.work-sans-font {
-  font-family: "Work Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
+/* miama font */
+@import url('https://fonts.cdnfonts.com/css/miama');
+
+                
+.inter-sans-font> {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
 /* shared styles */
 body{
     background-color: #111111;
 }
+
+:root{
+    --font-size: 0.9rem;
+}
+
 .display-flex{
     display: flex;
 }
 .text-white{
     color: white;
 }
+.title{
+    font-size: 3rem;
+}
+
+.text-align{
+    text-align: center;
+}
+.btn-primary{
+    border: 1px solid black;
+    background-color: rgb(199, 78, 59);;
+    border-radius: 42px;
+    font-size: 1rem;
+    font-weight:600;
+    padding: 10px 25px;
+}
+.btn-secondary{
+    border: 1px solid white;
+    background-color: black;
+    border-radius: 42px;
+    font-size: 1rem;
+    font-weight:600;
+    padding: 10px 25px;
+}
+
 
 /* navbar styles */
 
 .navbar{
     justify-content: space-between;
     align-items: center;
+}
+.home-btn{
+    /* margin-left:-10px; */
+    border: 10px solid rgb(199, 78, 59);
+    border-radius: 46px;
+    background-color: rgb(199, 78, 59);
+    margin-right: 10px;
 }
 .brand{
     font-size: 2.25rem;
@@ -30,13 +70,131 @@ body{
 .nav-links{
     border:1px solid rgba(255, 255, 255, 0.1);
     border-radius: 39px;
+    padding: 5px;
+      
 }
  .nav-item{
     list-style: none;
     margin-right: 30px;
     font-size: 1.125rem;
+    padding: 10px;
  }
 .nav-link{
     text-decoration: none;
     font-weight:500;
+    padding-left: 10px;
+}
+.navbar, .banner{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* banner styles */
+.banner{
+    justify-content: space-between;
+}
+.banner-title{
+    font-size: 4.89rem;
+}
+#miama{
+    font-family: 'Miama', sans-serif;                                          
+}
+.banner-description{
+    font-size: 1rem;
+}
+.banner-content img{
+    width: 100%;
+}
+.img-banner{
+    margin-top: 200px;
+}
+/* .badge{
+    height: 50px;
+    width: 50px;
+    background-color:rgb(199, 78, 59);
+    border-radius: 50%;position:relative;
+} */
+/* #banner-badge-1{
+     border: 1px solid rgba(54, 53, 53, 0.54);
+    background-color:rgba(48, 48, 48, 0.54);
+    border-radius: 12px;
+    font-size: 1.5rem;
+    font-weight:600;
+    padding: 20px 40px; 
+    margin-left: 100px;
+    margin-top: 100px;
+}
+#banner-badge-2{
+    border: 1px solid rgba(54, 53, 53, 0.54);
+   background-color:rgba(48, 48, 48, 0.54);
+   border-radius: 12px;
+   font-size: 1.5rem;
+   font-weight:600;
+   padding: 20px 40px; 
+   margin-left: -100px;
+   margin-top: -100px;
+}
+#banner-digit{
+    font-size: 1.5rem;
+}
+#banner-digit-tutorial{
+    font-size: 1rem;
+}
+.banner-badge-main img{
+    width: 100%;
+} */
+
+
+
+/* habits styles */
+.habits{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+/* 
+.habits-title{
+    font-size: 3rem; 
+} */
+.habits-description{
+    --font-size:var(--font-size);
+    text-align: center;
+}
+.habit{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+}
+.habit-content{
+    margin:0 auto;
+}
+.habit-content img{
+    border-radius: 100px;
+}
+.habit-content-img-title{
+    font-size: 18px;
+    text-align: center;
+} 
+.habit-content-img-description{
+    --font-size:var(--font-size);
+    text-align: center;
+}
+
+/* responsive media query */
+@media screen and (max-width: 576px) {
+    .navbar, 
+    .banner,
+    .habit{
+        flex-direction: column;
+    }
+    .nav-links{
+        display: none;
+    }
+    .habit{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); 
+    }
+   
+    .habit-content{
+        justify-content: center;
+    }
+
 }
