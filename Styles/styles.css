@@ -1,24 +1,26 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* miama font */
-@import url('https://fonts.cdnfonts.com/css/miama');
 
                 
-.inter-sans-font> {
+.inter-sans-font {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
   }
 /* shared styles */
-body{
-    background-color: #111111;
-}
-
 :root{
     --font-size: 0.9rem;
+    --background-color:black;
 }
-
+.inter{
+    color: Inter;
+}
+main{
+    background-color:var(--background-color);
+    margin-top: -4px;
+}
 .display-flex{
     display: flex;
 }
@@ -51,10 +53,13 @@ body{
 
 
 /* navbar styles */
-
+.header{
+    background-color: #1d1b1b;
+}
 .navbar{
     justify-content: space-between;
     align-items: center;
+    
 }
 .home-btn{
     /* margin-left:-10px; */
@@ -101,6 +106,7 @@ body{
 }
 .banner-description{
     font-size: 1rem;
+    margin-top: -50px;
 }
 .banner-content img{
     width: 100%;
@@ -150,17 +156,18 @@ body{
 .habits{
     max-width: 1440px;
     margin: 0 auto;
+    padding-top: 40px;
 }
-/* 
-.habits-title{
-    font-size: 3rem; 
-} */
+
+
 .habits-description{
     --font-size:var(--font-size);
     text-align: center;
+    margin-top: -25px;
 }
-.habit{
+.habit-container{
     display: grid;
+    
     grid-template-columns: repeat(4, 1fr); 
 }
 .habit-content{
@@ -176,25 +183,68 @@ body{
 .habit-content-img-description{
     --font-size:var(--font-size);
     text-align: center;
+    margin-top: -10px;
 }
+
+/* run styles started*/
+.run-container{
+    margin: 20px 90px ;
+    border-radius: 18px;
+    background-color:rgba(255, 255, 255, 0.189) ;
+}
+.run-content{
+    padding-left:54px;
+}
+.run-description{
+    color: var(--font-size);
+}
+.run-img img{
+   border-radius: 18px;
+   width: 60%;
+   margin: 30px 32px 29px 165px ;
+}
+
+/* bmi style started */
+
+.bmi-top{
+    text-transform:capitalize;
+    text-align: center;
+    margin-left: 384.5px;
+    margin-right: 384.5px;
+    margin-bottom: 88px;
+    /* padding-bottom: 20px; */
+}
+.bmi-top-description{
+    font-size: var(--font-size);
+    margin-top: -30px;
+}
+
 
 /* responsive media query */
 @media screen and (max-width: 576px) {
     .navbar, 
     .banner,
-    .habit{
+    .habit,
+    .run-container{
         flex-direction: column;
     }
     .nav-links{
         display: none;
     }
-    .habit{
+    .habit-container{
         display: grid;
         grid-template-columns: repeat(1, 1fr); 
     }
-   
     .habit-content{
         justify-content: center;
     }
 
+    .run-container{
+        margin: 50px 10px ;
+    }
+    .run-img img{
+        width: 80%;
+        margin-left: 40px;
+     }
+     
 }
