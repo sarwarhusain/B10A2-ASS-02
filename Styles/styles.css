@@ -10,6 +10,9 @@
     font-style: normal;
   }
 /* shared styles */
+.description-txt-color{
+    color: rgba(190, 183, 183, 0.5);
+}
 :root{
     --font-size: 0.9rem;
     --background-color:black;
@@ -167,8 +170,8 @@ main{
 }
 .habit-container{
     display: grid;
-    
     grid-template-columns: repeat(4, 1fr); 
+    margin:20px 90px ; ;
 }
 .habit-content{
     margin:0 auto;
@@ -194,9 +197,10 @@ main{
 }
 .run-content{
     padding-left:54px;
+    margin-top: -20px;
 }
 .run-description{
-    color: var(--font-size);
+    font-size: var(--font-size);
 }
 .run-img img{
    border-radius: 18px;
@@ -208,43 +212,126 @@ main{
 
 .bmi-top{
     text-transform:capitalize;
-    text-align: center;
-    margin-left: 384.5px;
-    margin-right: 384.5px;
-    margin-bottom: 88px;
-    /* padding-bottom: 20px; */
+    text-align: left;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 200px;
 }
 .bmi-top-description{
     font-size: var(--font-size);
     margin-top: -30px;
 }
+.bmi-container{
+    background-color:rgba(255, 255, 255, 0.189) ;
+}
+.bmi-content{
+    justify-content: space-between;
+    margin: 20px 90px ;
+}
+/* shared */
+.bmi-title{
+    font-size: 28px;
+}
+
+.table {
+    border-collapse: collapse;
+}
+td{
+    color:rgba(255, 255, 255, 0.521) ;
+    font-size: var(--font-size);
+}
+th{
+    font-size:1rem;
+    color: white;
+}
+td,th {
+    border: 1px solid rgba(118, 112, 112, 0.189) ;
+    padding: 5px 10px;
+}
+.th1{
+   text-align: left;
+}
+
+.bmi-form-description{
+    margin-right: -50px;
+    margin-top: -30px;
+    font-size: var(--font-size);
+}
+.form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+input,select{
+    height: 2rem;
+    margin: 5px 5px;
+    padding: 5px 5px;
+    border: 1px solid rgba(255, 255, 255, 0.189) ;
+    border-radius: 8px;
+    color:rgba(255, 255, 255, 0.521) ;
+    background-color:rgba(255, 255, 255, 0.189) ;
+}
+#factor{
+    grid-column: span 2;
+}
+input::placeholder{
+    color:rgba(255, 255, 255, 0.521) ;
+}
+
+
+
+
 
 
 /* responsive media query */
 @media screen and (max-width: 576px) {
     .navbar, 
     .banner,
-    .habit,
-    .run-container{
+    .run-container,
+    .form-content,
+    .bmi-content {
         flex-direction: column;
     }
     .nav-links{
         display: none;
     }
+    .habits h2{
+        font-size: 40px;
+        padding-bottom: 10 px;
+    }
     .habit-container{
         display: grid;
         grid-template-columns: repeat(1, 1fr); 
     }
-    .habit-content{
-        justify-content: center;
+    .habit-content img {
+        margin-left: 18px;
     }
 
     .run-container{
         margin: 50px 10px ;
     }
+    .run-content{
+        margin-right: 50px;
+    }
+    .run-content .btn-primary{
+        width: 100%;
+    }
     .run-img img{
         width: 80%;
         margin-left: 40px;
      }
-     
+
+     .bmi-top{
+        text-align: left;
+        margin-left: 20px;
+     }
+     .bmi-content{
+        justify-content: start;
+        margin: 10px 25px;
+     }
+     .bmi-content h4{
+        font-size: 20px;
+     }
+     .bmi-form h4{
+        padding-bottom: 23px;
+     }
 }
