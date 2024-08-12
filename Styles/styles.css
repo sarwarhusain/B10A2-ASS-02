@@ -10,6 +10,7 @@
     font-style: normal;
   }
 /* shared styles */
+
 .description-txt-color{
     color: rgba(190, 183, 183, 0.5);
 }
@@ -59,10 +60,12 @@ main{
 /* navbar styles */
 .header{
     background-color: #1d1b1b;
+    padding: 0px 90px;
 }
 .navbar{
     justify-content: space-between;
     align-items: center;
+
     
 }
 .home-btn{
@@ -96,8 +99,13 @@ main{
 .navbar, .banner{
     max-width: 1440px;
     margin: 0 auto;
+    /* margin: 0px 90px ; */
 }
 
+.icon{
+    display: none;
+    color: white;
+}
 /* banner styles */
 .banner{
     justify-content: space-between;
@@ -192,8 +200,9 @@ main{
 
 /* run styles started*/
 .run-container{
-    margin: 20px 90px ;
+    margin: 88px 90px ;
     border-radius: 18px;
+
     background-color:rgba(255, 255, 255, 0.189);
 }
 .run-content{
@@ -214,8 +223,8 @@ main{
 .bmi-top{
     text-transform:capitalize;
     text-align: left;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 88px;
+    margin-bottom: 88px;
     margin-left: 200px;
 }
 .bmi-top-description{
@@ -281,9 +290,8 @@ input::placeholder{
 }
 
 /* teams style started */
-.teams-container{
-    max-width: 1440px;
-    margin: 0 auto;
+.teams{
+    margin-top: 88px;
 }
 .teams-description{
     font-size: var(--font-size);
@@ -294,8 +302,9 @@ input::placeholder{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     background-color:rgba(255, 255, 255, 0.189) ;
-    margin: 20px 90px ;
+    margin: 58px 90px ;
     border-radius: 8px;
+    
 }
 .team-content{
     padding: 10px 15px;
@@ -304,7 +313,7 @@ input::placeholder{
     width: 100%;
     height: 100%;
     border-radius: 18px;
-    border: 1px solid tomato; 
+    /* border: 1px solid tomato;  */
 }
 .team-content h4{
     font-weight:600;
@@ -320,24 +329,61 @@ input::placeholder{
 }
 
 
-
+/* footer style started */
+footer{
+    background-color:rgba(255, 255, 255, 0.189);
+}
+/* footer p{
+    text-align: center;
+} */
+.footer-container{
+    margin-top: 88px;
+}
+.footer-content{
+    margin: 20px 90px ;
+}
+.footer-content h2{
+    font-size: 4.4rem;
+    
+}
+.footer-content h3{
+    color: white;
+}
+.footer-content p{
+    color: rgba(190, 183, 183, 0.5);
+}
 
 /* responsive media query */
 @media screen and (max-width: 576px) {
-    .navbar, 
+    .nav,
     .banner,
     .run-container,
     .form-content,
     .bmi-content,
-    .team-container{
+    .team-container,
+    .footer-container{
         flex-direction: column;
+    }
+    .header{
+        padding: 0px 30px;
     }
     .nav-links{
         display: none;
     }
+    .icon{
+        display: contents;
+        color: white;
+    }
+    
+    .banner-content h2{
+        font-size: 3rem;
+        padding-bottom: 20px;
+    }
+   
+   
     .habits h2{
         font-size: 40px;
-        padding-bottom: 10 px;
+        margin-top: -30px;
     }
     .habit-container{
         display: grid;
@@ -374,6 +420,12 @@ input::placeholder{
         display: grid;
         grid-template-columns: repeat(1,1fr);
         margin: 0px 10px ;
+    }
+    .footer-container{
+        text-align: start;
+    }
+    .footer-content{
+        margin: 0px 20px ;
     }
     
 }
