@@ -13,6 +13,7 @@
 .description-txt-color{
     color: rgba(190, 183, 183, 0.5);
 }
+
 :root{
     --font-size: 0.9rem;
     --background-color:black;
@@ -193,7 +194,7 @@ main{
 .run-container{
     margin: 20px 90px ;
     border-radius: 18px;
-    background-color:rgba(255, 255, 255, 0.189) ;
+    background-color:rgba(255, 255, 255, 0.189);
 }
 .run-content{
     padding-left:54px;
@@ -251,7 +252,9 @@ td,th {
 .th1{
    text-align: left;
 }
-
+.bmi-form{
+    margin-bottom:20px;
+}
 .bmi-form-description{
     margin-right: -50px;
     margin-top: -30px;
@@ -277,7 +280,44 @@ input::placeholder{
     color:rgba(255, 255, 255, 0.521) ;
 }
 
+/* teams style started */
+.teams-container{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.teams-description{
+    font-size: var(--font-size);
+    margin-top: -30px;
+}
 
+.team-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    background-color:rgba(255, 255, 255, 0.189) ;
+    margin: 20px 90px ;
+    border-radius: 8px;
+}
+.team-content{
+    padding: 10px 15px;
+}
+.team-content img{
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    border: 1px solid tomato; 
+}
+.team-content h4{
+    font-weight:600;
+    color:white ;
+    margin-top: -80px;
+    margin-left: 20px;
+}
+.team-content p{
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: -20px;
+    font-weight:700;
+    margin-left: 20px;
+}
 
 
 
@@ -288,7 +328,8 @@ input::placeholder{
     .banner,
     .run-container,
     .form-content,
-    .bmi-content {
+    .bmi-content,
+    .team-container{
         flex-direction: column;
     }
     .nav-links{
@@ -328,10 +369,11 @@ input::placeholder{
         justify-content: start;
         margin: 10px 25px;
      }
-     .bmi-content h4{
-        font-size: 20px;
-     }
-     .bmi-form h4{
-        padding-bottom: 23px;
-     }
+     
+     .team-container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        margin: 0px 10px ;
+    }
+    
 }
