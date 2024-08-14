@@ -99,8 +99,8 @@ main{
 .navbar, .banner{
     max-width: 1440px;
     margin: 0 auto;
-    /* margin: 0px 90px ; */
 }
+
 
 .icon{
     display: none;
@@ -109,6 +109,9 @@ main{
 /* banner styles */
 .banner{
     justify-content: space-between;
+}
+.banner img{
+    margin-left: 80px;
 }
 .banner-title{
     font-size: 4.89rem;
@@ -120,47 +123,55 @@ main{
     font-size: 1rem;
     margin-top: -50px;
 }
-.banner-content img{
-    width: 100%;
+/*  */
+.badge-box{
+    width: 100;
 }
-.img-banner{
-    margin-top: 200px;
-}
-/* .badge{
-    height: 50px;
-    width: 50px;
-    background-color:rgb(199, 78, 59);
-    border-radius: 50%;position:relative;
-} */
-/* #banner-badge-1{
-     border: 1px solid rgba(54, 53, 53, 0.54);
-    background-color:rgba(48, 48, 48, 0.54);
+#badge-1{
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     font-size: 1.5rem;
-    font-weight:600;
-    padding: 20px 40px; 
-    margin-left: 100px;
-    margin-top: 100px;
+    font-weight: 500;
+    padding: 5px 20px;
+    margin-left: -210px;
+    margin-bottom: 500px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgb(255, 255, 255);
+
 }
-#banner-badge-2{
-    border: 1px solid rgba(54, 53, 53, 0.54);
-   background-color:rgba(48, 48, 48, 0.54);
-   border-radius: 12px;
-   font-size: 1.5rem;
-   font-weight:600;
-   padding: 20px 40px; 
-   margin-left: -100px;
-   margin-top: -100px;
+#badge-title{
+    font-size: 2rem;
+    font-weight:700;
 }
-#banner-digit{
+.badge-description{
+    font-size: var(--font-size);
+    margin-top: -5px;
+}
+
+
+#badge-2{
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
     font-size: 1.5rem;
+    font-weight: 500;
+    padding: 5px 20px;
+    margin-left: -510px;
+    margin-top: 500px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgb(255, 255, 255);
 }
-#banner-digit-tutorial{
-    font-size: 1rem;
+
+#badge-title{
+    font-size: 2rem;
+    font-weight:700;
 }
-.banner-badge-main img{
-    width: 100%;
-} */
+.badge-description{
+    font-size: var(--font-size);
+    margin-top: -5px;
+}
+.btn-badge{
+    background-color: aqua;
+}
 
 
 
@@ -311,7 +322,7 @@ input::placeholder{
 }
 .team-content img{
     width: 100%;
-    height: 100%;
+    height:100%;
     border-radius: 18px;
     /* border: 1px solid tomato;  */
 }
@@ -343,7 +354,8 @@ footer{
     margin: 20px 90px ;
 }
 .footer-content h2{
-    font-size: 4.4rem;
+    font-size: 4rem;
+    margin:-5px;
     
 }
 .footer-content h3{
@@ -352,7 +364,9 @@ footer{
 .footer-content p{
     color: rgba(190, 183, 183, 0.5);
 }
-
+.reserved p{
+    text-align: center;
+}
 /* responsive media query */
 @media screen and (max-width: 576px) {
     .nav,
@@ -370,6 +384,13 @@ footer{
     .nav-links{
         display: none;
     }
+
+    #badge-1{
+        display: none;
+    }
+    #badge-2{
+        display: none;
+    }
     .icon{
         display: contents;
         color: white;
@@ -379,8 +400,6 @@ footer{
         font-size: 3rem;
         padding-bottom: 20px;
     }
-   
-   
     .habits h2{
         font-size: 40px;
         margin-top: -30px;
